@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>How Fast Can You Click Me?</title>
+    <style>
+body {
+  background-image: url('Coding-Geospatial.jpg');
+}
+</style>
+     <script>
+      var click=0; 
+var outOfTime = false;
+function weird(){
+if(!outOfTime){
+click+=1; 
+document.getElementById("score").innerHTML = click;
+}
+}
+var time = 60; //time in seconds
+var timer = setInterval(function(){
+ time--;
