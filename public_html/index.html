@@ -19,3 +19,19 @@ document.getElementById("score").innerHTML = click;
 var time = 60; //time in seconds
 var timer = setInterval(function(){
  time--;
+  document.getElementById("timer").innerHTML = time + "s";
+ if(time===0){
+   clearInterval(timer);
+   document.getElementById("timer").innerHTML = "Time's up!";
+   outOfTime = true;
+ }
+}, 1000);
+      </script>
+	</head>
+	<body>	Time remaining:
+      <span id = "timer"> 60s</span><br/>
+     Score:
+       <span id="score">0</span><br/>
+        <button onclick="weird()" id="demo"> </button>
+	</body>
+    </html>
